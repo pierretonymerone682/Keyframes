@@ -1,0 +1,261 @@
+*{padding:0;margin:0;box-sizing:border-box;}
+
+body {
+  height:100vh;
+  width:100vw;
+  background-color:lightblue;
+}
+
+p {  
+  color:Red;
+  font-size:30px;
+  font-family:helvetica, arial, sans-serif;
+  font-weight:bolder;
+  }
+
+.text {
+   display:block; 
+  position:absolute;
+  padding:10px;  
+  animation-name:change-position;
+  animation-iteration-count:infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration:5s;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+/*@keyframes change-position {
+  0%{transform: translate(0px, 0px);
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    background-color: green;
+  }
+  15%{letter-spacing:5px;
+    background-color: yellow;
+  }
+  25%{ letter-spacing:0; background-color: orange;
+   transform:translate(73vw, 50px) scaleX(1.0);
+  }
+
+  50%{transform:translate(73vw, 83vh) ;
+  letter-spacing:0px;
+  background-color: blue
+}
+  65%{letter-spacing:5px;
+    background-color: yellow
+}
+  75%{letter-spacing:0px;
+    background-color: orange;
+    transform:translate(0vw, 83vh);
+  }
+  100%{  transform: translate(0px, 0px);
+}
+}*/
+
+.cloud{
+  height:150px;
+  width:280px;
+  border-radius:50%;
+  background:white;
+  border:5px solid white;
+  margin-left:200px;
+  position:relative;
+  z-index:8;
+  animation-name: cover; 
+  animation-duration: 3s;
+ }
+.cloud:before{
+  content:"";
+  position:absolute;
+  height:75px;
+  width:200px;
+  background:white;
+  border-radius:50px;
+  border:5px solid white;
+  left:-15px;
+  bottom:-5px;
+  }
+
+.cloud:after{
+    content:"";
+  position:absolute;
+  height:50px;
+  width:205px;
+  background:white;
+  border-radius:50px;
+  border:5px solid white;
+  right:-15px;
+  bottom:-5px;
+  }
+.wap {
+  display: inline-block;
+  width: 90px;
+  height: 80px;
+}
+.sun {
+  height: 100px;
+  width: 100px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  left: 550px;
+  top: 10px;
+  box-shadow: 0 0 2px 2px white, 0 0 4px 4px yellow;
+}
+
+
+@keyframes cover{
+  from{transform: translateX(0);}
+  to{transform: translateX(220px);}
+}
+
+
+#landscape{
+  display: block;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  margin: 300px;
+  margin-left: 500px;
+}
+#hillmain{
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-color: burlywood;
+  z-index: 10;
+  animation-name: coverbody;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.mountain{
+  position: fixed;
+  display: block;
+  background-color: burlywood;
+  border: 1px solid black;
+  transform: rotate(45deg);
+  width: 60px;
+  height: 60px;
+  animation-name: coverbody;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.mountain1{
+  margin-left: 15px;
+  margin-top: -25px;
+  z-index: -10;
+}
+.mountain2{
+  margin-left: 150px;
+  margin-top: -25px;
+  z-index: -10;
+}
+.mountain3{
+  width: 90px;
+  height: 90px;
+  margin-left: 80px;
+  margin-top: -45px;
+  z-index: -11;
+}
+.mountain4{
+  width: 90px;
+  height: 90px;
+  margin-left: 180px;
+  margin-top: -40px;
+  z-index: -12;
+}
+.grass{
+  width: 300px;
+  height: 45px;
+  background-color: greenyellow;
+  position: fixed;
+  display: block;
+  margin-top: 55px;
+  animation-name: coverleaves;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.tree-leaves{
+  position: fixed;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  z-index: 12;
+  animation-name: coverleaves;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.circle-tree{
+  position: fixed;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  animation-name: coverleaves;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.circle-tree1{
+  margin-top:0px;
+  margin-left:-5px;
+}
+.circle-tree2{
+  margin-top:-5px;
+  margin-left:5px;
+}
+
+.circle-tree3{
+  margin-top:-5px;
+  margin-left:16px;
+}
+
+.circle-tree4{
+  margin-top:5px;
+  margin-left:23px;
+}
+
+.circle-tree5{
+  margin-top:18px;
+  margin-left:20px;
+}
+.tree-trunk{
+  position: fixed;
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: brown;
+  border: 1px solid black;
+  margin-top: 24px;
+  margin-left: 13px;
+  z-index: 11;
+}
+.tree1{
+  position: fixed;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.tree2{
+  position: fixed;
+  margin-left: 105px;
+  margin-top: 12px;
+}
+.tree3{
+  position: fixed;
+  margin-left: 175px;
+  margin-top: 20px;
+}
+.tree4{
+  position: fixed;
+  margin-left: 245px;
+  margin-top: 8px;
+}
+@keyframes coverbody{
+  from{background-color: burlywood;}
+  to{background-color: brown;}
+}
+@keyframes coverleaves{
+  from{background-color: greenyellow;}
+  to{background-color: green;}
+}
